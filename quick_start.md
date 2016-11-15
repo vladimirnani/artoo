@@ -23,6 +23,12 @@ Before anything, we need to install **artoo.js**. Hopefully, this is a painless 
 
 If you have trouble dropping it, just right click the icon, copy the link address and create a new bookmark you will call artoo and paste the url.
 
+or you could inject follogin script into your page
+
+```javascript
+(function(){var t={},e=!0;if("object"==typeof this.artoo&&(artoo.settings.reload||(artoo.log.verbose("artoo already exists within this page. No need to inject him again."),artoo.loadSettings(t),artoo.exec(),e=!1)),e){var o=document.getElementsByTagName("body")[0];o||(o=document.createElement("body"),document.documentElement.appendChild(o));var a=document.createElement("script");console.log("artoo.js is loading..."),a.src="https://medialab.github.io/artoo/public/dist/artoo-latest.min.js",a.type="text/javascript",a.id="artoo_injected_script",a.setAttribute("settings",JSON.stringify(t)),o.appendChild(a)}}).call(this);
+```
+
 Now that we are ready, let's scrape!
 
 ---
